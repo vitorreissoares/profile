@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vitor Reis Soares</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .header {
+      text-align: center;
+      padding: 30px 20px 10px;
+      background-color: #f8f9fa;
+      border-bottom: 2px solid #ddd;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #007bff;
+    }
+
+    .header h1 {
+      margin: 15px 0 5px;
+      font-size: 1.5em;
+      color: #333;
+    }
+
+    .bio {
+      font-size: 0.9em;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .social-icons,
+    .footer-icons {
+      margin: 10px 0;
+    }
+
+    .social-icons a,
+    .footer-icons a {
+      margin: 0 10px;
+      font-size: 1.2em;
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .container {
+      flex: 1;
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .project {
+      margin: 15px 0;
+      padding: 15px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .title-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .title {
+      font-size: 1em;
+      color: #007bff;
+      flex: 1;
+    }
+
+    .content {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+    .content ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .content li {
+      margin-bottom: 5px;
+    }
+
+    .article-item {
+      margin-bottom: 30px;
+    }
+
+    .article-item p {
+      margin: 2px 0;
+      line-height: 1.4;
+    }
+
+    .article-buttons {
+      margin-top: 8px;
+    }
+
+    .small-btn {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 0;
+      padding: 4px 10px;
+      font-size: 0.75em;
+      margin-right: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .small-btn:hover {
+      background-color: #0056b3;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    footer {
+      background-color: #f8f9fa;
+      border-top: 1px solid #ddd;
+      text-align: center;
+      padding: 15px 10px;
+    }
+
+    .footer-text {
+      margin-top: 8px;
+      font-size: 0.8em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <img src="sua-foto.jpg" alt="Foto de Perfil" class="profile-pic" />
+    <h1>Vitor Reis Soares</h1>
+    <p class="bio">
+      Master's in Administration from PPGAd-UFF (Graduate Program in Administration at the Fluminense Federal University).
+      Graduated in History from UFF. Author of the first scientific article developed in Brazil to be published in the world's leading political marketing journal (Journal of Political Marketing).
+      Coordinates the “Human Politics” research project (2023–Present).
+    </p>
+
+    <div class="social-icons">
+      <a href="http://lattes.cnpq.br/seulattes" target="_blank" title="Currículo Lattes"><i class="fas fa-graduation-cap"></i></a>
+      <a href="https://orcid.org/seuorcid" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a>
+      <a href="https://linkedin.com/in/seulinkedin" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://scholar.google.com/citations?user=SEUID" target="_blank" title="Google Scholar"><i class="fab fa-google"></i></a>
+      <a href="https://github.com/seuusuario" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="project">
+      <div class="title-container" onclick="toggleContent('publicacoes')">
+        <div class="title">Publicações</div>
+      </div>
+      <div class="content" id="publicacoes">
+        <ul>
+          <li class="article-item">
+            <strong>Human Branding in Political Marketing: A Systematic Literature Review and Agenda for Future Research</strong>
+            <p><em>Journal of Political Marketing | 2025-05-12 | Journal article</em></p>
+            <p>Contributors: Vitor Reis Soares; Martius Vicente Rodriguez y Rodriguez; Sérgio de Sousa Montalvão; Maria Carolina Martins Rodrigues; Antonio Batista da Silva Oliveira</p>
+
+            <div class="article-buttons">
+              <a href="https://doi.org/10.1080/15377857.2025.2491333" target="_blank" class="small-btn">
+                <i class="fas fa-external-link-alt"></i> View
+              </a>
+              <button class="small-btn" onclick="toggleContent('abstract1')">
+                <i class="fas fa-align-left"></i> Abstract
+              </button>
+            </div>
+
+            <div class="content" id="abstract1">
+              <p>
+                When Speed, Butler, and Collins introduced the theory of human brands into the field of political marketing, the topic garnered increasing interest from researchers...
+              </p>
+            </div>
+          </li>
+
+          <li class="article-item">
+            <strong>Outro artigo de exemplo</strong>
+            <p><em>Revista X | 2024-03-01 | Journal article</em></p>
+            <p>Contributors: Nome A; Nome B</p>
+
+            <div class="article-buttons">
+              <a href="https://doi.org/10.xxxx/xxxxx" target="_blank" class="small-btn">
+                <i class="fas fa-external-link-alt"></i> View
+              </a>
+              <button class="small-btn" onclick="toggleContent('abstract2')">
+                <i class="fas fa-align-left"></i> Abstract
+              </button>
+            </div>
+
+            <div class="content" id="abstract2">
+              <p>
+                Resumo do segundo artigo aqui. Você pode expandir com o conteúdo real depois.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="project">
+  <div class="title-container" onclick="toggleContent('ensino')">
+    <div class="title">Formação</div>
+  </div>
+  <div class="content" id="ensino">
+    <ul>
+      <li class="article-item">
+        <strong>Curso 1</strong>
+        <p><em>Google Meet | Quinta-feira, às 20h, online.</em></p>
+        <div class="article-buttons">
+          <a href="https://doi.org/10.1080/15377857.2025.2491333" target="_blank" class="small-btn">
+            <i class="fas fa-clipboard-list"></i> Inscreva-se
+          </a>
+          <button class="small-btn" onclick="toggleContent('ementa1')">
+            <i class="fas fa-align-left"></i> Ementa
+          </button>
+        </div>
+        <div class="content" id="ementa1">
+          <p>O curso será legal...</p>
+        </div>
+      </li>
+
+      <li class="article-item">
+        <strong>Curso 2</strong>
+        <p><em>Google Meet | Quarta-feira, às 20h, online.</em></p>
+        <div class="article-buttons">
+          <a href="https://doi.org/10.1080/15377857.2025.2491333" target="_blank" class="small-btn">
+            <i class="fas fa-clipboard-list"></i> Inscreva-se
+          </a>
+          <button class="small-btn" onclick="toggleContent('ementa2')">
+            <i class="fas fa-align-left"></i> Ementa
+          </button>
+        </div>
+        <div class="content" id="ementa2">
+          <p>O curso será legal mesmo...</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+    <div class="project">
+  <div class="title-container" onclick="toggleContent('desenvolvimento')">
+    <div class="title">Desenvolvimento</div>
+  </div>
+  <div class="content" id="desenvolvimento">
+    <ul>
+      <li class="article-item">
+        <strong>Projeto 1</strong>
+        <p><em>Projeto bacana.</em></p>
+        <div class="article-buttons">
+          <a href="https://doi.org/10.1080/15377857.2025.2491333" target="_blank" class="small-btn">
+            <i class="fas fa-external-link-alt"></i> View
+          </a>
+          <button class="small-btn" onclick="toggleContent('resumo1')">
+            <i class="fas fa-align-left"></i> Abstract
+          </button>
+        </div>
+        <div class="content" id="resumo1">
+          <p>O projeto será legal...</p>
+        </div>
+      </li>
+
+      <li class="article-item">
+        <strong>Projeto 2</strong>
+        <p><em>Projeto bacana mesmo.</em></p>
+        <div class="article-buttons">
+          <a href="https://doi.org/10.1080/15377857.2025.2491333" target="_blank" class="small-btn">
+            <i class="fas fa-external-link-alt"></i> View
+          </a>
+          <button class="small-btn" onclick="toggleContent('resumo2')">
+            <i class="fas fa-align-left"></i> Abstract
+          </button>
+        </div>
+        <div class="content" id="resumo2">
+          <p>O projeto será legal mesmo...</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+  </div>
+
+  <footer>
+    <div class="footer-icons">
+      <a href="mailto:seuemail@email.com" class="email" target="_blank" title="E-mail"><i class="fas fa-envelope"></i></a>
+      <a href="https://wa.me/seunumerowhatsapp" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <div class="footer-text">Entre em contato por e-mail ou WhatsApp</div>
+  </footer>
+
+  <script>
+    function toggleContent(id) {
+      const content = document.getElementById(id);
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>
