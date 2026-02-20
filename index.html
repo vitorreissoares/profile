@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vitor Reis Soares</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="icon" href="icone.png" type="image/png"> <title>Vitor Reis Soares</title> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <meta property="og:title" content="Vitor Reis Soares - Portfólio" /> <meta property="og:description" content="Pesquisador em Administração e História, autor publicado internacionalmente e coordenador do projeto Human Politics." /> <meta property="og:image" content="sua-foto.jpg" /> <meta property="og:url" content="https://seudominio.com/portfolio.html" /> <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -17,10 +22,29 @@
     }
 
     .header {
+      position: relative;
       text-align: center;
       padding: 30px 20px 10px;
       background-color: #f8f9fa;
       border-bottom: 2px solid #ddd;
+    }
+
+    .share-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #007bff;
+      color: white;
+      padding: 8px 10px;
+      border-radius: 50%;
+      font-size: 1em;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+
+    .share-btn:hover {
+      background-color: #0056b3;
     }
 
     .profile-pic {
@@ -38,10 +62,13 @@
     }
 
     .bio {
-      font-size: 0.9em;
-      color: #555;
-      margin-bottom: 15px;
-    }
+  font-size: 0.9em;
+  color: #555;
+  margin: 0 auto 15px auto;
+  max-width: 1200px;
+  
+}
+
 
     .social-icons,
     .footer-icons {
@@ -151,74 +178,79 @@
       font-size: 0.8em;
       color: #777;
     }
+
+    /* CSS ADICIONADO PARA OS LOGOS */
+    .logo-container {
+      text-align: center;
+      padding: 2px 10px;
+      background-color: #ffffff; /* Cor da faixa alterada para branco */
+      border-top: 1px solid #ddd; /* Mantém a borda para separar do conteúdo */
+    }
+    .logo-img {
+      /* Removemos a altura daqui para definir individualmente */
+      width: auto;  /* Mantém a proporção */
+      margin: 0 15px; /* Espaçamento entre os logos */
+      vertical-align: middle;
+    }
+
+    /* Tamanho específico para a logo da UFF */
+    .logo-uff {
+      height: 190px; /* <- Ajuste o tamanho da UFF aqui */
+    }
+
+    /* Tamanho específico para a logo da IESP */
+    .logo-iesp {
+      height: 80px; /* <- Ajuste o tamanho da IESP aqui */
+    }
   </style>
 </head>
 <body>
 
   <div class="header">
-    <img src="sua-foto.jpg" alt="Foto de Perfil" class="profile-pic" />
-    <h1>Vitor Reis Soares</h1>
-    <p class="bio">
-      Doutorando em Ciência Política pelo IIESP-UERJ. Autor do primeiro estudo realizado no Brasil a ser publicado no Journal of Political Marketing. Analista de Dados em Políticas Públicas na UERJ. Desenvolve pesquisas através de monitoramento e avaliação de eleições e políticas públicas utilizando Ciência de Dados (R e Python).
-    </p>
+    <div class="share-btn" onclick="sharePage()" title="Compartilhar">
+      <i class="fas fa-share-alt"></i>
+    </div>
 
-    <div class="social-icons">
+    <img src="sua-foto.jpg" alt="Foto de Perfil" class="profile-pic" />
+    <h1>Vitor Reis Soares</h1> <p class="bio">
+    Doutorando em Ciência Política pelo IIESP-UERJ. Autor do primeiro estudo realizado no Brasil a ser publicado no Journal of Political Marketing. Analista de Dados em Políticas Públicas na UERJ. Desenvolve pesquisas através de monitoramento e avaliação de eleições e políticas públicas utilizando Ciência de Dados (R e Python).
+    </p> <div class="social-icons">
       <a href="https://lattes.cnpq.br/6158297915560080" target="_blank" title="Currículo Lattes"><i class="fas fa-graduation-cap"></i></a>
       <a href="https://orcid.org/0009-0003-3723-7722" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a>
       <a href="https://linkedin.com/in/vitorreissoares" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
       <a href="https://scholar.google.com.br/citations?user=0BSfm-wAAAAJ&hl=pt-BR" target="_blank" title="Google Scholar"><i class="fab fa-google"></i></a>
-      <a href="https://github.com/vitorreissoares" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-    </div>
+      <a href="https://github.com/vitorreissoares" target="_blank" title="GitHub"><i class="fab fa-github"></i></a> </div>
   </div>
 
-  <div class="container">
-
-    <div class="project">
+    <div class="container"> <div class="project">
       <div class="title-container" onclick="toggleContent('publicacoes')">
-        <div class="title">Publicações</div>
-      </div>
+        <div class="title">Publicações</div> </div>
       <div class="content" id="publicacoes">
         <ul>
           <li class="article-item">
-            <strong>Human Branding in Political Marketing: A Systematic Literature Review and Agenda for Future Research</strong>
-            <p><em>Journal of Political Marketing | 2025-05-12 | Journal article</em></p>
-            <p>Contributors: Vitor Reis Soares; Martius Vicente Rodriguez y Rodriguez; Sérgio de Sousa Montalvão; Maria Carolina Martins Rodrigues; Antonio Batista da Silva Oliveira</p>
-
-            <div class="article-buttons">
-              <a href="https://doi.org/10.1080/15377857.2025.2491333" target="_blank" class="small-btn">
-                <i class="fas fa-external-link-alt"></i> View
-              </a>
+            <strong>The human brand radar in politics: content and sentiment analysis of Ecuador's 2023 election</strong> <p><em>Vitor Reis Soares et al.</em></p> <div class="article-buttons">
+              <a href="www.google.com" target="_blank" class="small-btn"> <i class="fas fa-external-link-alt"></i> Ver </a>
               <button class="small-btn" onclick="toggleContent('abstract1')">
-                <i class="fas fa-align-left"></i> Abstract
-              </button>
+                <i class="fas fa-align-left"></i> Resumo </button>
             </div>
 
             <div class="content" id="abstract1">
               <p>
-                When Speed, Butler, and Collins introduced the theory of human brands into the field of political marketing, the topic garnered increasing interest from researchers...
-              </p>
+                <p>Em breve...</p>  </p>
             </div>
           </li>
 
           <li class="article-item">
-            <strong>Outro artigo de exemplo</strong>
-            <p><em>Revista X | 2024-03-01 | Journal article</em></p>
-            <p>Contributors: Nome A; Nome B</p>
-
-            <div class="article-buttons">
-              <a href="https://doi.org/10.xxxx/xxxxx" target="_blank" class="small-btn">
-                <i class="fas fa-external-link-alt"></i> View
-              </a>
+            <strong>Human Branding in Political Marketing: A Systematic Literature Review and Agenda for Future Research</strong> <p><em>Vitor Reis Soares et al.</em></p> <div class="article-buttons">
+              <a href="https://www.tandfonline.com/doi/full/10.1080/15377857.2025.2491333" target="_blank" class="small-btn"> <i class="fas fa-external-link-alt"></i> Ver </a>
               <button class="small-btn" onclick="toggleContent('abstract2')">
-                <i class="fas fa-align-left"></i> Abstract
-              </button>
+                <i class="fas fa-align-left"></i> Resumo </button>
             </div>
 
             <div class="content" id="abstract2">
               <p>
-                Resumo do segundo artigo aqui. Você pode expandir com o conteúdo real depois.
-              </p>
-            </div>
+                When Speed, Butler, and Collins introduced the theory of human brands into the field of political marketing, the topic garnered increasing interest from researchers. As a result of this growing academic attention, it became essential to update key concepts and clarify emerging terminologies in order to advance the conceptual and theoretical understanding of this evolving literature. To address this need, we conducted a systematic literature review (SLR) to identify the theories, research contexts, characteristics, and methodological approaches explored within the domain. Through this review, we modernized fundamental concepts such as authority, authenticity, humanization, and positioning. Furthermore, building on the theory of political brands and contributions related to human brands, we propose a basic definition of the human brand in politics. As the first SLR in this area, this paper serves as both a guide for marketing professionals developing human brands and a resource for researchers. It provides guidance on conducting an SLR and highlights future research directions, presenting a forward-looking agenda with 16 potential avenues for addressing existing gaps in the field.
+              </p> </div>
           </li>
         </ul>
       </div>
@@ -226,40 +258,27 @@
 
     <div class="project">
   <div class="title-container" onclick="toggleContent('ensino')">
-    <div class="title">Formação</div>
-  </div>
+    <div class="title">Formação</div> </div>
   <div class="content" id="ensino">
     <ul>
       <li class="article-item">
-        <strong>Curso 1</strong>
-        <p><em>Google Meet | Quinta-feira, às 20h, online.</em></p>
-        <div class="article-buttons">
-          <a href="https://doi.org/10.1080/15377857.2025.2491333" target="_blank" class="small-btn">
-            <i class="fas fa-clipboard-list"></i> Inscreva-se
-          </a>
+        <strong>Marketing Político à prova de balas</strong> <p><em>Google Meet | Quinta-feira, às 20h, online.</em></p> <div class="article-buttons">
+          <a href="www.google.com" target="_blank" class="small-btn"> <i class="fas fa-clipboard-list"></i> Inscreva-se </a>
           <button class="small-btn" onclick="toggleContent('ementa1')">
-            <i class="fas fa-align-left"></i> Ementa
-          </button>
+            <i class="fas fa-align-left"></i> Ementa </button>
         </div>
         <div class="content" id="ementa1">
-          <p>O curso será legal...</p>
-        </div>
+          <p>Em breve...</p> </div>
       </li>
 
       <li class="article-item">
-        <strong>Curso 2</strong>
-        <p><em>Google Meet | Quarta-feira, às 20h, online.</em></p>
-        <div class="article-buttons">
-          <a href="https://doi.org/10.1080/15377857.2025.2491333" target="_blank" class="small-btn">
-            <i class="fas fa-clipboard-list"></i> Inscreva-se
-          </a>
+        <strong>ABC Digital: Como Publicar Utilizando Revisão Sistemática e IA</strong> <p><em>UERJ Maracanã | Quarta-feira, às 20h, sala 1708.</em></p> <div class="article-buttons">
+          <a href="www.google.com" target="_blank" class="small-btn"> <i class="fas fa-clipboard-list"></i> Inscreva-se </a>
           <button class="small-btn" onclick="toggleContent('ementa2')">
-            <i class="fas fa-align-left"></i> Ementa
-          </button>
+            <i class="fas fa-align-left"></i> Ementa </button>
         </div>
         <div class="content" id="ementa2">
-          <p>O curso será legal mesmo...</p>
-        </div>
+          <p>Em breve...</p> </div>
       </li>
     </ul>
   </div>
@@ -268,40 +287,27 @@
 
     <div class="project">
   <div class="title-container" onclick="toggleContent('desenvolvimento')">
-    <div class="title">Desenvolvimento</div>
-  </div>
+    <div class="title">Desenvolvimento</div> </div>
   <div class="content" id="desenvolvimento">
     <ul>
       <li class="article-item">
-        <strong>Projeto 1</strong>
-        <p><em>Projeto bacana.</em></p>
-        <div class="article-buttons">
-          <a href="https://doi.org/10.1080/15377857.2025.2491333" target="_blank" class="small-btn">
-            <i class="fas fa-external-link-alt"></i> View
-          </a>
+        <strong>Projeto 1</strong> <p><em>Projeto bacana.</em></p> <div class="article-buttons">
+          <a href="www.google.com" target="_blank" class="small-btn"> <i class="fas fa-external-link-alt"></i> Ver </a>
           <button class="small-btn" onclick="toggleContent('resumo1')">
-            <i class="fas fa-align-left"></i> Abstract
-          </button>
+            <i class="fas fa-align-left"></i> Resumo </button>
         </div>
         <div class="content" id="resumo1">
-          <p>O projeto será legal...</p>
-        </div>
+          <p>Em breve...</p> </div>
       </li>
 
       <li class="article-item">
-        <strong>Projeto 2</strong>
-        <p><em>Projeto bacana mesmo.</em></p>
-        <div class="article-buttons">
-          <a href="https://doi.org/10.1080/15377857.2025.2491333" target="_blank" class="small-btn">
-            <i class="fas fa-external-link-alt"></i> View
-          </a>
+        <strong>Projeto 2</strong> <p><em>Projeto bacana mesmo.</em></p> <div class="article-buttons">
+          <a href="www.google.com" target="_blank" class="small-btn"> <i class="fas fa-external-link-alt"></i> Ver </a>
           <button class="small-btn" onclick="toggleContent('resumo2')">
-            <i class="fas fa-align-left"></i> Abstract
-          </button>
+            <i class="fas fa-align-left"></i> Resumo </button>
         </div>
         <div class="content" id="resumo2">
-          <p>O projeto será legal mesmo...</p>
-        </div>
+          <p>Em breve...</p> </div>
       </li>
     </ul>
   </div>
@@ -310,23 +316,33 @@
 
   </div>
 
+  <div class="logo-container">
+    <img src="https://images.seeklogo.com/logo-png/14/1/uff-logo-png_seeklogo-144310.png" alt="Logo UFF" class="logo-img logo-uff">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtkIeQziXowGsofNgOie5VFpULi9GrN6ZdwQ&s" alt="Logo IESP" class="logo-img logo-iesp">
+  </div>
   <footer>
     <div class="footer-icons">
-      <a href="mailto:vitorreissoares@id.uff.br" class="email" target="_blank" title="E-mail"><i class="fas fa-envelope"></i></a>
-      <a href="https://wa.me/qr/2GYX4OY4GGZLK1" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-    </div>
+      <a href="mailto:vitorreissoares@id.uff.br" class="email" target="_blank" title="E-mail"><i class="fas fa-envelope"></i></a> <a href="https://wa.me/qr/2GYX4OY4GGZLK1" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a> </div>
     <div class="footer-text">Entre em contato por e-mail ou WhatsApp</div>
   </footer>
-
-  <script>
+<script> 
     function toggleContent(id) {
       const content = document.getElementById(id);
       content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function sharePage() {
+      if (navigator.share) {
+        navigator.share({
+          title: document.title,
+          text: 'Confira este portfólio:', 
+          url: window.location.href
+        }).catch(console.error);
+      } else {
+        alert("Seu navegador não suporta compartilhamento nativo. Copie o link: " + window.location.href);
+      }
     }
   </script>
 
 </body>
 </html>
-
-
-
