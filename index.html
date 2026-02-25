@@ -202,6 +202,87 @@
     .logo-iesp {
       height: 80px; /* <- Ajuste o tamanho da IESP aqui */
     }
+
+    .modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background: #fff;
+  margin: 5% auto;
+  padding: 30px;
+  width: 400px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.termo-box {
+  height: 100px;
+  overflow-y: scroll;
+  background: #f5f5f5;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.btn-enviar {
+  width: 100%;
+  padding: 10px;
+  background: #0a66c2;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.small-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0;
+  padding: 4px 10px;
+  font-size: 0.75em;
+  margin-right: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.checkbox input {
+  width: auto;
+  margin: 0;
+}
+
   </style>
 </head>
 <body>
@@ -258,17 +339,19 @@
 
     <div class="project">
   <div class="title-container" onclick="toggleContent('ensino')">
-    <div class="title">Formação</div> </div>
+    <div class="title">Mentoria e Formação</div> </div>
   <div class="content" id="ensino">
     <ul>
       <li class="article-item">
-        <strong>Marketing Político à prova de balas</strong> <p><em>Google Meet | Quinta-feira, às 20h, online.</em></p> <div class="article-buttons">
-          <a href="www.google.com" target="_blank" class="small-btn"> <i class="fas fa-clipboard-list"></i> Inscreva-se </a>
+        <strong>Monitoramento de Comportamento Político nas Mídias Sociais</strong> <p><em>Social Listening | Mentoria on-line e presencial.</em></p> <div class="article-buttons">
+          <button id="openForm" class="small-btn">
+  <i class="fas fa-clipboard-list"></i> Inscreva-se
+</button>
           <button class="small-btn" onclick="toggleContent('ementa1')">
-            <i class="fas fa-align-left"></i> Ementa </button>
+            <i class="fas fa-align-left"></i> Saiba mais </button>
         </div>
         <div class="content" id="ementa1">
-          <p>Em breve...</p> </div>
+          <p>Serviço especializado de social listening para lideranças políticas, que monitora e analisa sistematicamente as reações do público às suas postagens nas mídias sociais (Facebook, Instagram, YouTube, Twitter e TikTok). A partir da extração automatizada de comentários e da análise de sentimentos, capaz de identificar menções positivas, negativas e até oito emoções distintas associadas ao conteúdo, é possível compreender com precisão como a audiência responde a cada publicação. Por meio do Radar da Liderança Política, ferramenta que combina análise de conteúdo e análise de sentimentos em um processo robusto, replicável, em desenvolvimento no âmbito do IESP-UERJ e ancorado em conceitos fundamentais publicados no Journal of Political Marketing, obtém-se um diagnóstico claro que permite ajustar estratégias, comparar desempenhos e fortalecer a comunicação política com base em evidências.</p> </div>
       </li>
 
       <li class="article-item">
@@ -316,6 +399,58 @@
 
   </div>
 
+  <div id="modalForm" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Inscrição</h2>
+
+    <form id="inscricaoForm" action="https://formsubmit.co/vitorreissoares@id.uff.br" method="POST">
+      
+      <label>Nome do Candidato</label>
+      <input type="text" name="nome" required>
+
+      <label>Razão Social da Campanha Eleitoral</label>
+      <input type="text" name="razao_social" required>
+      
+      <label>Nome do Responsável pela Comunicação</label>
+      <input type="text" name="responsavel_comunicacao" required>
+
+      <label>E-mail</label>
+      <input type="email" name="email" required>
+
+      <label>Termo de Compromisso</label>
+      <div class="termo-box">
+        <p>
+          Ao se inscrever, declaro que estou ciente das informações
+          fornecidas e autorizo o contato por e-mail.
+        </p>
+        <p>
+          Seus dados serão utilizados exclusivamente para comunicação
+          referente à formação.
+        </p>
+      </div>
+
+      <div class="checkbox">
+        <input type="checkbox" id="aceite" required>
+        <label for="aceite">Li e aceito o termo</label>
+      </div>
+
+      <button type="submit" class="btn-enviar">Enviar</button>
+
+      <input type="hidden" name="_subject" value="Nova inscrição no site Vitor Reis Soares">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://vitorreissoares.github.io/obrigado.html">
+    <input type="hidden" name="curso" value="Monitoramento de Comportamento Político nas Mídias Sociais">
+
+    </form>
+
+    
+
+
+  </div>
+</div>
+
   <div class="logo-container">
     <img src="https://images.seeklogo.com/logo-png/14/1/uff-logo-png_seeklogo-144310.png" alt="Logo UFF" class="logo-img logo-uff">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtkIeQziXowGsofNgOie5VFpULi9GrN6ZdwQ&s" alt="Logo IESP" class="logo-img logo-iesp">
@@ -325,24 +460,42 @@
       <a href="mailto:vitorreissoares@id.uff.br" class="email" target="_blank" title="E-mail"><i class="fas fa-envelope"></i></a> <a href="https://wa.me/qr/2GYX4OY4GGZLK1" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a> </div>
     <div class="footer-text">Entre em contato por e-mail ou WhatsApp</div>
   </footer>
-<script> 
-    function toggleContent(id) {
-      const content = document.getElementById(id);
-      content.style.display = content.style.display === 'block' ? 'none' : 'block';
-    }
+<script>
+function toggleContent(id) {
+  const content = document.getElementById(id);
+  content.style.display = content.style.display === 'block' ? 'none' : 'block';
+}
 
-    function sharePage() {
-      if (navigator.share) {
-        navigator.share({
-          title: document.title,
-          text: 'Confira este portfólio:', 
-          url: window.location.href
-        }).catch(console.error);
-      } else {
-        alert("Seu navegador não suporta compartilhamento nativo. Copie o link: " + window.location.href);
-      }
-    }
-  </script>
+function sharePage() {
+  if (navigator.share) {
+    navigator.share({
+      title: document.title,
+      text: 'Confira este portfólio:',
+      url: window.location.href
+    }).catch(console.error);
+  } else {
+    alert("Seu navegador não suporta compartilhamento nativo.");
+  }
+}
+
+const modal = document.getElementById("modalForm");
+const btn = document.getElementById("openForm");
+const close = document.querySelector(".close");
+
+btn.onclick = () => modal.style.display = "block";
+close.onclick = () => modal.style.display = "none";
+
+window.onclick = (event) => {
+  if (event.target == modal) modal.style.display = "none";
+};
+
+document.getElementById("inscricaoForm").addEventListener("submit", function(e){
+  if(!document.getElementById("aceite").checked){
+    e.preventDefault();
+    alert("Você precisa aceitar o termo.");
+  }
+});
+</script>
 
 </body>
 </html>
