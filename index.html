@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="icon" href="icone.png" type="image/png"> <title>Vitor Reis Soares</title> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
-  <meta property="og:title" content="Vitor Reis Soares - Portfólio" /> <meta property="og:description" content="Pesquisador em Administração e História, autor publicado internacionalmente e coordenador do projeto Human Politics." /> <meta property="og:image" content="sua-foto.jpg" /> <meta property="og:url" content="https://seudominio.com/portfolio.html" /> <meta property="og:type" content="website" />
+  <meta property="og:title" content="Vitor Reis Soares - Site" /> <meta property="og:description" content="Desenvolvo análises e avaliações de comportamento político e políticas públicas, combinando Ciência Política, Administração Pública e Ciência de Dados." /> <meta property="og:image" content="sua-foto.jpg" /> <meta property="og:url" content="https://vitorreissoares.github.io/profile/" /> <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
 
   
@@ -54,20 +54,30 @@
       border-radius: 50%;
       border: 3px solid #007bff;
     }
+ 
+ 
+.header h1 {
+  margin: 15px 0 5px;
+  font-size: 1.5em;
+  color: #333;
+}
 
-    .header h1 {
-      margin: 15px 0 5px;
-      font-size: 1.5em;
-      color: #333;
-    }
+.cargo {
+  margin: 0 auto 8px auto;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 600;
+  color: #444;
+}
 
-    .bio {
+.bio {
   font-size: 0.9em;
   color: #555;
   margin: 0 auto 15px auto;
   max-width: 1200px;
-  
+  text-align: center;
 }
+
 
 
     .social-icons,
@@ -292,15 +302,42 @@ input {
       <i class="fas fa-share-alt"></i>
     </div>
 
-    <img src="sua-foto.jpg" alt="Foto de Perfil" class="profile-pic" />
-    <h1>Vitor Reis Soares</h1> <p class="bio">
-    Doutorando em Ciência Política pelo IESP-UERJ. Desenvolvo pesquisas através de monitoramento de comportamento político e avaliação de políticas públicas utilizando Ciência de Dados (R e Python).
-    </p> <div class="social-icons">
-      <a href="https://lattes.cnpq.br/6158297915560080" target="_blank" title="Currículo Lattes"><i class="fas fa-graduation-cap"></i></a>
-      <a href="https://orcid.org/0009-0003-3723-7722" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a>
-      <a href="https://linkedin.com/in/vitorreissoares" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="https://scholar.google.com.br/citations?user=0BSfm-wAAAAJ&hl=pt-BR" target="_blank" title="Google Scholar"><i class="fab fa-google"></i></a>
-      <a href="https://github.com/vitorreissoares" target="_blank" title="GitHub"><i class="fab fa-github"></i></a> </div>
+    
+<img src="sua-foto.jpg" alt="Foto de Perfil" class="profile-pic" />
+
+<h1>Vitor Reis Soares</h1>
+
+<p class="cargo">
+  Doutorando em Ciência Política pelo IESP-UERJ
+</p>
+
+<p class="bio">
+  Desenvolvo análises e avaliações de comportamento político e políticas públicas,
+  combinando Ciência Política, Administração Pública e Ciência de Dados.
+</p>
+
+<div class="social-icons">
+  <a href="https://lattes.cnpq.br/6158297915560080" target="_blank" title="Currículo Lattes">
+    <i class="fas fa-graduation-cap"></i>
+  </a>
+
+  <a href="https://orcid.org/0009-0003-3723-7722" target="_blank" title="ORCID">
+    <i class="fab fa-orcid"></i>
+  </a>
+
+  <a href="https://linkedin.com/in/vitorreissoares" target="_blank" title="LinkedIn">
+    <i class="fab fa-linkedin"></i>
+  </a>
+
+  <a href="https://scholar.google.com.br/citations?user=0BSfm-wAAAAJ&hl=pt-BR" target="_blank" title="Google Scholar">
+    <i class="fab fa-google"></i>
+  </a>
+
+  <a href="https://github.com/vitorreissoares" target="_blank" title="GitHub">
+    <i class="fab fa-github"></i>
+  </a>
+</div>
+
   </div>
 
     <div class="container"> <div class="project">
@@ -309,15 +346,15 @@ input {
       <div class="content" id="publicacoes">
         <ul>
           <li class="article-item">
-            <strong>Título</strong> <p><em>Vitor Reis Soares et al.</em></p> <div class="article-buttons">
-              <a href="www.google.com" target="_blank" class="small-btn"> <i class="fas fa-external-link-alt"></i> Ver </a>
+            <strong>Beyond the Triangle of Leadership: A Methodological Proposal for Assessing Political Leaders' Success on Social Media</strong> <p><em>Vitor Reis Soares</em></p> <div class="article-buttons">
+              <a href="https://ssrn.com/abstract=7193938" target="_blank" class="small-btn"> <i class="fas fa-external-link-alt"></i> Ver </a>
               <button class="small-btn" onclick="toggleContent('abstract1')">
                 <i class="fas fa-align-left"></i> Resumo </button>
             </div>
 
             <div class="content" id="abstract1">
               <p>
-                <p>Em breve...</p>  </p>
+                <p>In 2023, facing a potential impeachment, the President of Ecuador, Guillermo Lasso, called for an extraordinary election contested between Luisa González and Daniel Noboa. The short election, marked by violence and intensive use of social media, caused rapid fluctuations in audience behavior, which affected the candidates' performance-a perfect scenario to propose updates to the triangle of leadership. Using content and sentiment analysis via NLP with R, we classified posts and measured public reactions. We observed that content highlighting candidates' trustworthiness and their similarities with followers generated more positive responses. This combination of methods may provide a tool for assessing political leaders' performance on social media through a novel indicator. This study provides valuable insights for marketing professionals and researchers.</p>  </p>
             </div>
           </li>
 
@@ -339,38 +376,36 @@ input {
 
     <div class="project">
   <div class="title-container" onclick="toggleContent('ensino')">
-    <div class="title">Mentoria e Formação</div> </div>
+    <div class="title">Formação</div> </div>
   <div class="content" id="ensino">
     <ul>
       <li class="article-item">
-        <strong>Monitoramento de Comportamento Político nas Mídias Sociais</strong> <p><em>Social Listening | Mentoria on-line e presencial.</em></p> <div class="article-buttons">
-          <button id="openForm" class="small-btn">
-  <i class="fas fa-clipboard-list"></i> Inscreva-se
-</button>
-          <button class="small-btn" onclick="toggleContent('ementa1')">
-            <i class="fas fa-align-left"></i> Saiba mais </button>
-        </div>
-        <div class="content" id="ementa1">
-          <p>Serviço especializado de social listening para lideranças políticas, que monitora e analisa sistematicamente as reações do público às suas postagens nas mídias sociais (Facebook, Instagram, YouTube, Twitter e TikTok). A partir da extração automatizada de comentários e da análise de sentimentos, capaz de identificar menções positivas, negativas e até oito emoções distintas associadas ao conteúdo, é possível compreender com precisão como a audiência responde a cada publicação. Por meio do Radar da Liderança Política, ferramenta que combina análise de conteúdo e análise de sentimentos em um processo robusto, replicável, em desenvolvimento no âmbito do IESP-UERJ e ancorado em conceitos fundamentais publicados no Journal of Political Marketing, obtém-se um diagnóstico claro que permite ajustar estratégias, comparar desempenhos e fortalecer a comunicação política com base em evidências.</p> </div>
-      </li>
-
-      <li class="article-item">
-        <strong>ABC Digital: Como Publicar Utilizando Revisão Sistemática e IA</strong> <p><em>UERJ Maracanã | Quarta-feira, às 20h, sala 1708.</em></p> <div class="article-buttons">
+        <strong>Como fazer uma Revisão Sistemática de Literatura</strong> <p><em>UERJ Maracanã | Segunda-feira, às 14h, sala 1708.</em></p> <div class="article-buttons">
           <a href="www.google.com" target="_blank" class="small-btn"> <i class="fas fa-clipboard-list"></i> Inscreva-se </a>
           <button class="small-btn" onclick="toggleContent('ementa2')">
             <i class="fas fa-align-left"></i> Ementa </button>
         </div>
         <div class="content" id="ementa2">
-          <p>Em breve...</p> </div>
+          <p>Introdução aos conceitos básicos, as bases de dados e realização de uma Revisão Sistemática de Literatura.</p> </div>
       </li>
+
+      <li class="article-item">
+        <strong>Introdução ao R para Ciências Sociais</strong> <p><em>UERJ Maracanã | Sexta-feira, às 14h, sala 1708.</em></p> <div class="article-buttons">
+          <a href="www.google.com" target="_blank" class="small-btn"> <i class="fas fa-clipboard-list"></i> Inscreva-se </a>
+          <button class="small-btn" onclick="toggleContent('ementa3')">
+            <i class="fas fa-align-left"></i> Ementa </button>
+        </div>
+        <div class="content" id="ementa3">
+          <p>Instalação do RStudio, importação, manipulação e visualização de dados.</p> </div>
+      </li>
+
     </ul>
   </div>
 </div>
 
-
-    <div class="project">
+<div class="project">
   <div class="title-container" onclick="toggleContent('desenvolvimento')">
-    <div class="title">Desenvolvimento</div> </div>
+    <div class="title">Entregas</div> </div>
   <div class="content" id="desenvolvimento">
     <ul>
       <li class="article-item">
@@ -395,6 +430,31 @@ input {
     </ul>
   </div>
 </div>
+
+<!-- MENTORIA -->
+<div class="project">
+  <div class="title-container" onclick="toggleContent('mentoria')">
+    <div class="title">Mentoria</div> </div>
+  <div class="content" id="mentoria">
+    <ul>
+      <li class="article-item">
+        <strong>Avaliação de desempenho eleitoral através de monitoramento de mídias sociais</strong> <p><em>Social Listening | Mentoria on-line ou presencial.</em></p> <div class="article-buttons">
+          <button id="openForm" class="small-btn">
+  <i class="fas fa-clipboard-list"></i> Inscreva-se
+</button>
+          <button class="small-btn" onclick="toggleContent('ementa1')">
+            <i class="fas fa-align-left"></i> Saiba mais </button>
+        </div>
+        <div class="content" id="ementa1">
+          <p>Serviço especializado de social listening para lideranças políticas, que monitora e analisa sistematicamente as reações da audiência às suas postagens nas mídias sociais.</p> </div>
+      </li>
+
+    </ul>
+  </div>
+</div>
+
+
+    
 
 
   </div>
@@ -421,7 +481,7 @@ input {
       <label>Termo de Compromisso</label>
       <div class="termo-box">
         <p>
-          Ao se inscrever, declaro que estou ciente das informações
+          Ao me inscrever, declaro que estou ciente das informações
           fornecidas e autorizo o contato por e-mail.
         </p>
         <p>
